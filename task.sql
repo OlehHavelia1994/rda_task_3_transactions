@@ -7,7 +7,7 @@ VALUES (1, '2026-01-07');
 -- Start the transaction 
 START TRANSACTION;
 INSERT INTO OrderItems (OrderID, ProductID, Count)
-VALUES (1, 1, 5);
+VALUES (1, 1, 1);
 -- And some data should be created inside the transaction
 UPDATE Products
 INNER JOIN OrderItems
