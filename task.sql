@@ -10,9 +10,7 @@ INSERT INTO OrderItems (OrderID, ProductID, Count)
 VALUES (1, 1, 1);
 -- And some data should be created inside the transaction
 UPDATE Products
-INNER JOIN OrderItems
-ON Products.ID = OrderItems.ProductID
-SET Products.WarehouseAmount = Products.WarehouseAmount - OrderItems.Count
-WHERE Products.ID = 1;
+SET WarehouseAmount = WarehouseAmount - 1
+WHERE ID = 1;
 
 COMMIT; 
